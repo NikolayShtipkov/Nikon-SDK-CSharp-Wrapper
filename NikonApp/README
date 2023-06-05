@@ -1,0 +1,125 @@
+Nikon SDK C# Wrapper. An easy-to-use C# wrapper for the native MAID Nikon SDK.
+
+Version 2.1
+* Imported D500 enums
+
+Version 2.0.1
+* The wrapper is now compiled as 'AnyCPU' instead of having separate x86 and x64 binaries
+* Better error messages in case someone attempts to load an x86 MD3 in an x64 app, and vice versa
+
+Version 2.0
+* 64 BIT SUPPORT! :)
+* Yes, you read that right: 64-bit support! Nikon recently released 64-bit 
+  versions of their camera SDKs, the wrapper has been updated to support this
+* Imported D5 enums and structs
+
+Version 1.8
+* Imported D7200 enums
+* Imported Nikon1 V3 enums and structs
+
+Version 1.7
+* Imported D5500 enums
+
+Version 1.6
+* Imported D750 enums
+* Code cleanups
+
+Version 1.5
+* Imported D810 enums
+* Fixed D4S enum bug
+* Fixed bug in bulb capture with non-CPU lenses
+
+Version 1.4
+* Imported D4S enums
+
+Version 1.3
+* Imported D5300 and Df enums
+* Minor fix to VB.Net demo app (SaveFileDialog was displayed incorrectly)
+
+Version 1.2
+* Added helper functions for bulb capture, StartBulbCapture/StopBulbCapture
+* Imported D610 enums
+* Fixed bug that made it impossible to correctly set DateTime capabilities
+* Added new parameter to the CaptureComplete event, indicating SDRAM/Card destination
+* The binaries in the archive are now compiled with VS2013
+
+Version 1.1
+* The binaries in the archive are now compiled with VS2012
+* Disable thumbnail acquisition if the ThumbnailReady event isn't hooked up
+* Fixed memory leak caused by events that weren't being detached properly
+* Some code cleanups and modernization
+* Testapp: Added checkboxes for toggling previews/thumbnails
+* Testapp: Better error messages in case of missing MD3/NkdPTP.dll
+
+Version 1.0
+* New auto generated structs and enums
+* Various internal cleanups
+
+Version 0.9.2
+* Major cleanup/rewrite of internal NikonObject, MD3 interface
+* Fixed incorrect member in NkMAIDPicCtrlData struct 
+* Ignore 'NotSupported' exceptions when acquiring thumbnails
+
+Version 0.9.1
+* Imported D7100 enums
+* Fix for D5200 and D7100 thumbnail issue (unverified)
+
+Version 0.9
+* Better support for WinForms
+* All events are now fired on the main thread in WinForms projects
+* Added WinForms C# demo project
+* Added WinForms VB.NET demo project
+
+Version 0.8
+* Added several demo projects that shows how to use the library
+* Renamed function, GetCapabilities is now called GetCapabilityInfo
+* All projects now compile for x86 only, necessary since MD3s are 32 bit
+* Support for parameterized executable capabilities (TerminateCapture)
+* Minor internal optimizations and cleanups
+
+Version 0.7
+* Full support for video recording
+* Added new functions, StartRecordVideo and StopRecordVideo
+* Added new events, VideoFragmentReady and VideoRecordingInterrupted
+* Internal cleanups
+* Updated the demo_ui app to save video files to disk
+
+Version 0.6
+* Marshal all internal exceptions to the calling thread
+* Fixed a very rare issue in GetCapInfo, GetEnum and GetArray
+* Fixed deadlock when user attempts to hook up events from an eventhandler
+* Always use C# DateTime class instead of NkMAIDDateTime
+* Minor cleanup
+
+Version 0.5
+* Support for getting and setting 'generic' capabilities
+* Remove expression/interactivity dependencies in the WPF demo app
+* All native 'NkMAID*' structs are now available as C# structs
+* Fixed threading issue when running without a dispatcher
+* Support for Type0009 (D5200)
+* Experimental support for GetVideoImage
+
+Version 0.4
+* Support for 'low resolution' preview images (if your camera supports it)
+* Fixed event race conditions when running without a Dispatcher
+* Added 'live view' viewer in WPF demo app
+* Use normal non-nullable primitive types (Get, GetDefault)
+* All native 'eNkMAID*' enums are now available as C# enums
+
+Version 0.3
+* Fix 'live view' bug
+* New WPF demo application
+* Merge all capability IDs from all devices into one enum
+* New NikonRange class for range capabilities
+* Various internal cleanup and fixes
+
+Version 0.2
+* Support for getting the capability 'default values'
+* Fixed DateTime conversion issue
+* Fixed issue with Raw+Jpeg in the 'demo' app
+* More consistent error handling
+* More consistent internal naming
+* Hide internal classes/structures with more consistent access modifiers
+
+Version 0.1
+* Initial Release
